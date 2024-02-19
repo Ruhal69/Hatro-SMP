@@ -1,11 +1,12 @@
 .scroll-down {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px; /* Adjust as needed to position the arrow below the center of the text */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     color: #fff;
 }
+
 
 .scroll-icon {
     width: 30px;
