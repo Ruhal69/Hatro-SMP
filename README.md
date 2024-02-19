@@ -1,0 +1,2 @@
+# Hatro-SMP
+Hatro hosting
