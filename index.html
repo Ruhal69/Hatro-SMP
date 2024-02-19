@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatro SMP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing-text"></h1>
+    </header>
+    <section id="intro-section">
+        <h2 id="intro-heading"></h2>
+        <div class="intro-text">
+            <p>Welcome to the Hatro SMP Universe!</p>
+            <p>Are you ready to embark on an epic journey into the heart of Season 2? Dive into a world of endless adventures, unforgettable moments, and a community like no other!</p>
+            <p><strong>Why Join Us?</strong></p>
+            <ul>
+                <li>🌟 <strong>Vanilla Game Mode:</strong> Immerse yourself in pure Minecraft gameplay, where creativity knows no bounds!</li>
+                <li>🎮 <strong>Exciting Mini-Games:</strong> Get ready for a blast with our upcoming mini-games! From thrilling challenges to friendly competitions, there's something for everyone!</li>
+                <li>💬 <strong>Active Community:</strong> Connect with fellow gamers, share your experiences, and forge lifelong friendships in our vibrant Discord community!</li>
+                <li>👑 <strong>Be Part of the Story:</strong> Shape the future of Hatro SMP, leave your mark on our universe, and unleash your creativity alongside like-minded individuals!</li>
+            </ul>
+            <p>Join us today and experience gaming like never before. Your adventure awaits!</p>
+            <a href="https://discord.gg/SdyHg7zf2n" class="discord-link">Join Our Discord Server</a>
+        </div>
+    </section>
+    <div class="animated-circle"></div>
+    <div class="animated-square"></div>
+
+    <footer>
+        <p>"We may not be the same, but we're definitely better together." - Ruhal</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var hatroText = "Hatro SMP";
+            var introText = "Introduction";
+            var introIndex = 0;
+            var hatroIndex = 0;
+
+            function typeHatro() {
+                var hatroInterval = setInterval(function() {
+                    document.getElementById("typing-text").textContent += hatroText[hatroIndex++];
+                    if (hatroIndex >= hatroText.length) {
+                        clearInterval(hatroInterval);
+                        setTimeout(typeIntro, 1000); // Wait for 1 second before typing the introduction
+                    }
+                }, 200); // Adjust typing speed here (milliseconds)
+            }
+
+            function typeIntro() {
+                var introInterval = setInterval(function() {
+                    document.getElementById("intro-heading").textContent += introText[introIndex++];
+                    if (introIndex >= introText.length) {
+                        clearInterval(introInterval);
+                    }
+                }, 200); // Adjust typing speed here (milliseconds)
+            }
+
+            typeHatro(); // Start typing "Hatro SMP" immediately
+        });
+    </script>
+</body>
+</html>
